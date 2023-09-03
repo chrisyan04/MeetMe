@@ -1,0 +1,139 @@
+#timeline {
+    background-color: black;
+    color: bisque;
+
+    background-image: url(../../public/img/bg/desktop-1920x1080.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.timeline-title h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 5%;
+    color: bisque;
+    text-shadow: 2px 2px #00bcd4;
+    text-decoration: none;
+    position: relative;
+}
+
+.timeline-title h1::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: #00bcd4;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(0, -50%);
+    animation: underlineAnimation 3s infinite;
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+ul.timeline-list {
+    padding: 50px 0;
+}
+
+ul.timeline-list li {
+    position:relative;
+    list-style-type: none;
+    width: 6px;
+    background-color: bisque;
+    margin: 0 auto;
+    padding-top: 50px;
+    align-items: flex-start;
+}
+  
+ul.timeline-list li::after {
+    background: bisque;
+    content: '';
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+ul.timeline-list li div{
+    position: relative;
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+ul.timeline-list li div p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+ul.timeline-list li:nth-child(odd) div {
+    left: 45px;
+}
+  
+ul.timeline-list li:nth-child(even) div {
+    left: -445px;
+}
+  
+ul.timeline-list li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+  
+ul.timeline-list li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+}
+  
+ul.timeline-list li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+}
+  
+ul.timeline-list li.show div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+  
+.timeline-event {
+    font-size: 20px;
+    text-shadow: 1px 1px #00bcd4;
+}
+
+.uoft {
+    color: white;
+    text-shadow: 2px 2px rgb(22, 22, 146);
+}
+
+.iai {
+    color: white;
+    text-shadow: 2px 2px rgb(22, 22, 146);
+}
+
+.timeline-date {
+    font-size: 16px;
+    text-align: right;
+    margin-top: -15px;
+}
+
+@media screen and (max-width: 900px) {
+    ul.timeline-list li div {
+      width: 250px;
+    }
+    ul.timeline-list li:nth-child(even) div {
+      left: -289px;
+    }
+}

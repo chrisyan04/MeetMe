@@ -1,0 +1,75 @@
+header {
+    background-color: black;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo a {
+    color: bisque;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.my-logo {
+    height: 70px;
+    width: 70px;
+    transition: transform 1.5s, filter 1.5s;
+}
+
+.logo:hover .my-logo {
+    transform: scale(1.5);
+    filter: brightness(1.2);
+}
+
+.nav-links {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 50px;
+}
+
+.nav-links a {
+    color: bisque;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: 5s all ease;
+}
+
+.reveal.active{
+    opacity: 1;
+}

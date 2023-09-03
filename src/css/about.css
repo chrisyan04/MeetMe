@@ -1,0 +1,154 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    background-color: #000000;
+    overflow: visible;
+}
+
+@keyframes underlineAnimation {
+    0% {
+        width: 0;
+        left: 35%;
+        transform: translate(0, -20%);
+    }
+    25% {
+        width: 0;
+        left: 35%;
+        transform: none;
+    }
+    50% {
+        width: 30%;
+        left: 35%;
+        transform: none;
+    }
+    75% {
+        width: 0;
+        left: 35%;
+        transform: translateX(0, -20%);
+    }
+    100% {
+        width: 0;
+        left: 35%;
+        transform: translateX(0, -20%);
+    }
+}
+
+@keyframes changeBorderColor {
+    0% {
+        border-color: #00bcd4;
+    }
+    25% {
+        border-color: bisque;
+    }
+    50% {
+        border-color: rgba(0, 0, 0, 0);
+    }
+    75% {
+        border-color: bisque;
+    }
+    100% {
+        border-color: #00bcd4;
+    }
+}
+
+.border-changing {
+    animation: changeBorderColor 10s linear infinite;
+}
+
+
+#about-me {
+    background-color: #000000;
+    color: bisque;
+    padding: 70px 0;
+
+    background-image: url(../../public/img/bg/code-bg.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-me-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-me-title h1 {
+    font-size: 40px;
+    color: bisque;
+    text-shadow: 2px 2px #00bcd4;
+}
+
+.about-me-title h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: bisque;
+    text-shadow: 2px 2px #00bcd4;
+    text-decoration: none;
+    position: relative;
+}
+
+.about-me-title h1::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: #00bcd4;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(0, -20%);
+    animation: underlineAnimation 3s infinite;
+}
+
+.profile-picture {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 5px solid #00bcd4;
+}
+
+.about-me-content p {
+    font-size: 1.2rem;
+    color: bisque;
+}
+
+.about-me-content {
+    width: 100%;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    transition: transform 3s ease-in-out, opacity 1s ease;
+}
+
+.profile-content {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 250px;
+}
+
+.text-content {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 250px;
+}
+
+@media (max-width: 900px) {
+   
+    .about-me-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-content,
+    .text-content {
+        margin: 0;
+    }
+}

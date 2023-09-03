@@ -1,0 +1,10 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Proxima Nova", Arial, sans-serif;
+    background-color: #000000;
+    overflow: visible;
+}

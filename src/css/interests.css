@@ -1,0 +1,121 @@
+
+#interests {
+    background-color: #000000;
+    color: bisque;
+    padding: 70px 0;
+
+    background-image: url(../../public/img/bg/87115-lines-simple-background-abstract-hd-4k-dark-black-dribbble-oled.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.interests-container {
+    text-align: center;
+    max-width: 1200px;
+    margin: -15px auto;
+    padding: 20px;
+}
+
+@keyframes underlineAnimation {
+    0% {
+        width: 0;
+        left: 40%;
+        transform: translate(0, -50%);
+    }
+    25% {
+        width: 0;
+        left: 40%;
+        transform: none;
+    }
+    50% {
+        width: 20%;
+        left: 40%;
+        transform: none;
+    }
+    75% {
+        width: 0;
+        left: 40%;
+        transform: translateX(0, -50%);
+    }
+    100% {
+        width: 0;
+        left: 40%;
+        transform: translateX(0, -50%);
+    }
+}
+
+
+.interests-title h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px #00bcd4;
+    color: bisque;
+    text-decoration: none;
+    position: relative;
+}
+
+.interests-title h1::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: #00bcd4;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(0, -50%);
+    animation: underlineAnimation 3s infinite;
+}
+
+.interests-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    text-align: left;
+    max-width: 300px;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    transition: border 0.3s ease;
+}
+
+.interests-card-icon img {
+    max-width: 80px;
+    margin-bottom: 10px;
+}
+
+.interests-card-title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: bisque;
+    text-shadow: 1px 1.5px #00bcd4;
+}
+
+.interests-card-content ul {
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: bisque;
+}
+
+.interests-card-content ul li:nth-child(even) {
+    color: bisque;
+    margin-bottom: 5px;
+}
+
+.interests-card-content ul li:nth-child(odd) {
+    color: rgb(242, 164, 113);
+    margin-bottom: 5px;
+}
+
+.interests-card:hover {
+    transform: translateY(-10px);
+    transition: transform 1s ease-in-out, border 0.3 ease;
+    border-color: #fff;
+}
+
+.emoji {
+    font-size: 40px;
+}

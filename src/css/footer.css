@@ -1,0 +1,52 @@
+footer {
+    background: black;
+    color: bisque;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#scrollToTopBtn {
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    margin-top: 10px;
+    bottom: 10px;
+    border: none;
+}
+
+#scrollToTopBtn:hover {
+    transform: scale(1.1);
+}
+
+#scrollToTopBtn:hover .arrow {
+    border-color: #00bcd4;
+}
+
+#scrollToTopBtn {
+    display: none;
+}
+
+.arrow {
+    border: solid bisque;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 7px;
+    margin-top: 10px;
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
