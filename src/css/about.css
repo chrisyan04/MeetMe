@@ -39,41 +39,35 @@ body {
 
 @keyframes changeBorderColor {
     0% {
-        border-color: #00bcd4;
-    }
-    25% {
         border-color: bisque;
     }
     50% {
         border-color: rgba(0, 0, 0, 0);
     }
-    75% {
-        border-color: bisque;
-    }
     100% {
-        border-color: #00bcd4;
+        border-color: bisque;
     }
 }
 
 .border-changing {
-    animation: changeBorderColor 10s linear infinite;
+    animation: changeBorderColor 4s linear infinite;
 }
 
 
 #about-me {
     background-color: #000000;
     color: bisque;
-    padding: 70px 0;
-
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100vh;
 }
 
 .about-me-container {
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
+    margin-top: -10%;
 }
 
 .about-me-title h1 {
@@ -107,19 +101,25 @@ body {
 
 .profile-picture {
     width: 300px;
-    height: auto;
+    height: 300px;
     border-radius: 50%;
-    margin: 20px 0;
-    border: 5px solid #00bcd4;
+    border: 3px solid #00bcd4;
 }
 
+
 .about-me-content p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: bisque;
+    margin: 10px 10px ;
+}
+
+.profile-content {
+    width: 25%;
 }
 
 .about-me-content {
-    text-align: center;
+    font-family: 'Dekko';
+    text-align: left;
     margin-top: 5%;
     margin-bottom: auto;
     transition: transform 1s ease-in-out, opacity 1s ease;
@@ -128,26 +128,95 @@ body {
     justify-content: center;
 }
 
-.profile-content {
-    margin-right: 30%;
-    margin-left: -35%;
+.text-content {
+    width: 40%;
+    position: relative;
 }
 
-.text-content {
-    margin-left: 30%;
+.text-content p {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.text-content p:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.02);
 }
 
 .middle-part {
     height: 100px;
     width: 200px;
+    animation: moveBackAndForth 1s infinite alternate;
+}
+
+@keyframes moveBackAndForth {
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(5%);
+    }
 }
 
 .middle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 15%;
 }
 
+.uoft {
+    font-size: 1.1rem;
+    color: white;
+    text-shadow: 1px 0.5px blue;
+    text-decoration: none;
+}
+
+.data-science {
+    font-size: 1.1rem;
+    color: white;
+    text-shadow: 1px 0.5px #00bcd4;
+    text-decoration: none;
+}
+
+.seeking {
+    font-size: 1.1rem;
+    color: greenyellow;
+    text-shadow: 0.5px 0.5px bisque;
+    text-decoration: none;
+}
+
+.dots {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    left: 3%;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: bisque;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #197986;
+}
+
+.content-paragraph {
+    display: none;
+    font-size: 1rem;
+    color: bisque;
+    margin: 10px 10px;
+}
+
+.content-paragraph:first-child {
+    display: block;
+}
 
 @media (max-width: 900px) {
    

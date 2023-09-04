@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../src/css/footer.css">
     <link rel="stylesheet" href="../src/css/experience.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova:400,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -27,6 +29,92 @@
     </header>
 
     <main>
+        <section id="projects" class="reveal">
+            <div class="projects-container card-container">
+                <h2 class="projects-title">Projects</h2>
+                <div class="card slide-in">
+                    <div class="card-image" style="background-image: url(../public/img/card-bg/notes-bgcard-bg.gif);">
+                        <div class="card-overlay">
+                            <h3>USTC Notes</h3>
+                            <p>HTML • Notion</p>
+                            <a href="https://github.com/chrisyan04/UTSC-Notes" target="_blank" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card slide-in">
+                    <div class="card-image" style="background-image: url(../public/img/card-bg/shopeaze.png);">
+                        <div class="card-overlay">
+                            <h3>ShopEaze</h3>
+                            <p>Java • Android Studio • Firebase <br> Figma • Jira • Git</p>
+                            <a href="https://github.com/AndreyZIno/ShopEaze" target="_blank" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card slide-in">
+                    <div class="card-image" style="background-image: url(../public/img/card-bg/housing.gif);">
+                        <div class="card-overlay">
+                            <h3>House Pricing Predictor</h3>
+                            <p>Python • Jupyter Notebook <br> Pandas • NumPy • Matplotlib</p>
+                            <a href="https://github.com/chrisyan04/House-Pricing-Predictor" target="_blank" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card slide-in">
+                    <div class="card-image" style="background-image: url(../public/img/card-bg/ml.gif);">
+                        <div class="card-overlay">
+                            <h3>Digit Predicter</h3>
+                            <p>Python • TensorFlow • Keras <br> NumPy • Git</p>
+                            <a href="https://github.com/chrisyan04/Handwritten-Digit-Predictor" target="_blank" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>
+        
+
+        <section id="work" class="reveal">
+            <div class="work-container card-container">
+                <h2 class="work-title">Work</h2>
+                <div class="card slide-in">
+                    <div class="card-image" style="background-image: url(../public/img/card-bg/iai.jpeg);">
+                        <div class="card-overlay">
+                            <h3>Research Assistant</h3>
+                            <p>Python • R • R Studio <br> Statistical Analysis</p>
+                            <a href="https://github.com/chrisyan04/IAI-Research-Assistant" target="_blank" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="papers" class="reveal">
+            <div class="papers-container card-container">
+                <h2 class="papers-title">Papers</h2>
+                <div class="card slide-in">
+                    <div class="card-image" style="background-image: url(../public/img/card-bg/bike-report.png);">
+                        <div class="card-overlay">
+                            <h3>Bike Theft Report</h3>
+                            <p>R • R Studio • Git</p>
+                            <a href="https://github.com/chrisyan04/Toronto-Bike-Theft-Report" target="_blank" class="icon">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
     
     <footer>
@@ -40,5 +128,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="../src/js/footer.js"></script>
     <script src="../src/js/animation.js"></script>
+    <script src="../src/js/cardAnim.js"></script>
 </body>
 </html>

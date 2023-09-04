@@ -1,12 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta+Mahee:200,400');
+
 body, h1, p {
     margin: 0;
     padding: 0;
 }
 
+* { box-sizing: border-box; }
+
 body {
     font-family: "Proxima Nova", Arial, sans-serif;
     background-color: #000000;
     overflow: visible;
+}
+
+@keyframes underlineAnimation {
+    0% {
+        width: 0;
+        left: 40%;
+        transform: translate(0, -50%);
+    }
+    25% {
+        width: 0;
+        left: 40%;
+        transform: none;
+    }
+    50% {
+        width: 20%;
+        left: 40%;
+        transform: none;
+    }
+    75% {
+        width: 0;
+        left: 40%;
+        transform: translateX(0, -50%);
+    }
+    100% {
+        width: 0;
+        left: 40%;
+        transform: translateX(0, -50%);
+    }
 }
 
 #contact-form {
@@ -17,72 +49,327 @@ body {
     background-image: url(../../public/img/bg/wallpaperflare.com_wallpaper.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 110vh;
+    margin-top: -3%;
+
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 2s ease, transform 2s ease;
+    animation: slideDown 2s forwards;
 }
 
-/* Styles for the Contact Me section */
-.contact-container {
-    max-width: 60%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100%;
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.contact-title h1 {
-    font-size: 2.5rem;
-    color: bisque; /* Title text color */
+
+
+#contact-form-content {
+    margin-right: 30%;
+    
+    
+    
+    display: none;
+    transition: opacity 0.3s ease;
 }
 
-.contact-content {
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 60px;
+.container {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    background-image: url(../../public/img/bg/wrinkle-bg.gif);
+    border: 2px solid whitesmoke;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+    max-height: 600px;
+  }
+  
+  .wrapper {
+    padding: 27.5px;
+  }
+  
+  #contactForm {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+      'name'
+      'email'
+      'company'
+      'phone'
+      'message';
+  }
+  
+  .required-field {
+    grid-column: 1 / 2;
+  }
+  
+  .submit-button {
+    grid-column: 2 / 3;
+  }
+  
+  .name-field {
+    grid-area: name;
+    grid-column: 1 / 3;
+  }
+  
+  .email-field {
+    grid-area: email;
+    grid-column: 1 / 3;
+  }
+  
+  .company-field {
+    grid-area: company;
+    grid-column: 1 / 3;
+  }
+  
+  .phone-field {
+    grid-area: phone;
+    grid-column: 1 / 3;
+  }
+  
+  .message-field {
+    grid-area: message;
+    grid-column: 1 / 3;
+  }
+  
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
+  .contact-title {
+    text-align: center;
+  }
 
-.input-container {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-label {
+  .contact-me {
+    margin: 0 0 30px;
+    font-family: 'Dekko';
     font-weight: bold;
-    color: #555; /* Label text color */
+    font-size: 30px;
+    color: bisque;
+    text-shadow: 2px 2px 2px #00bcd4;
+    position: relative;
+  }
+  
+  .contact-me::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: #24808c;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    transform: translateX(0, -50%);
+    animation: underlineAnimationContact 3s infinite;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+@keyframes underlineAnimationContact {
+    0% {
+        width: 0;
+        left: 35%;
+        transform: translate(0, -50%);
+    }
+    25% {
+        width: 0;
+        left: 35%;
+        transform: none;
+    }
+    50% {
+        width: 30%;
+        left: 35%;
+        transform: none;
+    }
+    75% {
+        width: 0;
+        left: 35%;
+        transform: translateX(0, -50%);
+    }
+    100% {
+        width: 0;
+        left: 35%;
+        transform: translateX(0, -50%);
+    }
+}
+
+  .contact form {
+    border: 0;
+  }
+  
+  .contact form label {
+    display: block;
+  }
+  
+  .contact form p {
+    margin: 0;
+    font-family: 'Mukta Mahee', sans-serif;
+    color: bisque;
+    text-shadow: 2px 2px 2px #197986;
+  }
+  
+  .contact form input, .contact form textarea {
+    font-family: 'Mukta Mahee', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
     width: 100%;
+    padding: .4em .8em;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    outline-color: #00bcd4;
+  }
+
+.contact form input[type="text"],
+.contact form input[type="email"],
+.contact form input[type="tel"],
+.contact form textarea {
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px #00bcd4;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contact form input[type="text"]:focus,
+.contact form input[type="email"]:focus,
+.contact form input[type="tel"]:focus,
+.contact form textarea:focus {
+    color: whitesmoke;
+    font-weight: bold;
+}
+  
+  .contact form button {
+    font-family: 'Dekko';
+    font-weight: bold;
+    font-size: 1rem;
+    color: #197986;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.441);
+    background: rgba(255, 228, 196, 0.7);
+    width: 90px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    border-radius: 10px;
+  }
+  
+  .submit-button {
+    align-self: center;
+    justify-self: end;
+  }
+  
+  .contact form button:hover, .contact form button:focus {
+    background: rgba(255, 228, 196, 0.5);
+    text-shadow: 1px 1px 1px #00bcd4;
+    color: bisque;
+    outline: 0;
+    transition: background-color 0.5s ease-out;
+  }
+  
+  .required-field {
+    font-family: 'Mukta Mahee', sans-serif;
+    font-size: 12px;
+    color: bisque;
+    align-self: center;
+    justify-self: start;
+    font-weight: bold;
+  }
+  
+  .asterix {
+    color: #00bcd4;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.472);
+  }
+  
+  .alert {
+    margin-bottom: 1em;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+    background: bisque;
+    font-family: 'Mukta Mahee', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #197986;
+    border-radius: 10px;
+    display: none;
+  }
+
+  
+  .contact-form-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+    margin-right: 30%;
 }
 
-textarea {
-    resize: vertical;
-}
-
-.submit-button {
-    background-color: #333; /* Button background color */
-    color: #fff; /* Button text color */
-    padding: 10px 20px;
+.contact-form-toggle button {
+    font-family: 'Dekko';
+    background-color: #103e44;
+    color: bisque;
+    text-align: center;
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-.submit-button:hover {
-    background-color: #555; /* Button background color on hover */
+.contact-form-toggle button:hover {
+    background-color: #197986;
 }
+
+.contact-btn {
+    border-radius: 20px 0 0 20px;
+}
+
+.socials-btn {
+    border-radius: 0 20px 20px 0;
+}
+
+.contact-form-toggle .active {
+    background-color: #197986;
+}
+
+  @media (min-width: 500px) {
+    #contactForm {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        'name company'
+        'email phone'
+        'message message';
+    }
+  
+    .name-field {
+      grid-area: name;
+      grid-column: 1 / 2;
+    }
+  
+    .email-field {
+      grid-area: email;
+      grid-column: 1 / 2;
+    }
+  
+    .company-field {
+      grid-area: company;
+      grid-column: 2 / 3;
+      text-align: right;
+    }
+  
+    .phone-field {
+      grid-area: phone;
+      grid-column: 2 / 3;
+      text-align: right;
+    }
+  
+    .message-field {
+      grid-area: message;
+      grid-column: 1 / 3;
+    }
+  }
+  

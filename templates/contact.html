@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../src/css/contact.css">
     <link rel="stylesheet" href="../src/css/socials.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova:400,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -28,65 +30,70 @@
     </header>
 
     <main>
-        <section id="socials" class="reveal">
-            <div class="socials-container">
-                <div class="socials-title">
-                    <h1 class="fall-down-text">Socials</h1>
-                </div>
-                <div class="socials-content">
-                    <div class="socials-card">
-                        <div class="socials-card-icon">
-                            <a href="https://www.linkedin.com/in/chris-yan-1b1a3a1b2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <section id="contact-form" class="reveal">
+            <div class="contact-form-toggle">
+                <button id="showContactForm" class="contact-btn">Contact</button>
+                <button id="showSocials" class="socials-btn">Socials</button>
+            </div>
+            <div id="contact-form-content">
+                <div class="container">
+                    <div class="wrapper animated bounceInLeft">
+                      <div class="contact">
+                        <div class="contact-title">
+                            <h3 class="contact-me">Contact Me</h3>
                         </div>
-                        <div class="socials-card-title">
-                            <h2>LinkedIn</h2>
-                        </div>
-                        <div class="socials-card-content">
-                            <p>Connect with me on LinkedIn!</p>
-                        </div>
+                        <div class="alert">Your message has been sent!</div>
+                        <form id="contactForm">
+                          <p class="name-field">
+                            <label>Name <span class="asterix">*</span></label>
+                            <input type="text" name="name" id="name" required>
+                          </p>
+                          <p class="company-field">
+                            <label>Company</label>
+                            <input type="text" name="company" id="company">
+                          </p>
+                          <p class="email-field">
+                            <label>Email <span class="asterix">*</span></label>
+                            <input type="email" name="email" id="email" required>
+                          </p>
+                          <p class="phone-field">
+                            <label>Phone</label>
+                            <input type="text" name="phone" id="phone">
+                          </p>
+                          <p class="message-field full">
+                            <label>Message <span class="asterix">*</span></label>
+                            <textarea name="message" rows="5" id="message"></textarea>
+                          </p>
+                          <p class="required-field">Required field <span class="asterix">*</span></p>
+                          <p class="submit-button">
+                            <button type="submit">Submit</button>
+                          </p>
+                        </form>
+                      </div>
                     </div>
-                    <div class="socials-card">
-                        <div class="socials-card-icon">
-                            <a href="https://www.instagram.com/chris.yan_/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="socials-card-title">
-                            <h2>Instagram</h2>
-                        </div>
-                        <div class="socials-card-content">
-                            <p>Follow me on Instagram!</p>
-                        </div>
+                  </div>
+            </div>
+            
+            <div id="socials-content">
+                <div class="socials-container">
+                    <div class="socials-title">
+                        <h2>Follow Me on Social Media</h2>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/chris-yan-97820a228/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/chris.yan_/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/chrisyan04" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        </section>
-
-        <section id="contact-form" class="reveal">
-            <div class="contact-container">
-                <div class="contact-title">
-                    <h1 class="fall-down-text">Contact Me</h1>
-                </div>
-                <div class="contact-content">
-                    <form action="#" method="POST" class="contact-form">
-                        <div class="input-container">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="input-container">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="input-container">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Submit</button>
-                    </form>
-                </div>
+            <div id="success-message" style="display: none;">
+                <p>Thank you for contacting me! Your message has been successfully sent.</p>
             </div>
         </section>        
     </main>
@@ -100,7 +107,11 @@ It is a long established fact that a reader will be distracted by the readable c
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     <script src="../src/js/footer.js"></script>
     <script src="../src/js/animation.js"></script>
+    <script src="../src/js/contact.js"></script>
+    <script src="../src/js/contactToggle.js"></script>
 </body>
 </html>

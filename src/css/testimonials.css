@@ -6,6 +6,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px 0;
+    height: 100vh;
 }
 
 .testimonials-container {
@@ -113,3 +114,16 @@
 .testimonial:hover .testimonial-author {
     opacity: 1;
 }
+
+.testimonial {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 2s ease;
+  }
+  
+  /* CSS for the animation when in viewport */
+  .testimonial.slide-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

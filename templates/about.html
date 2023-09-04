@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../src/css/skills.css">
     <link rel="stylesheet" href="../src/css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova:400,700&display=swap">
+    <link href='https://fonts.googleapis.com/css?family=Dekko' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -33,20 +34,31 @@
                     <h1 class="fall-down-text">About Me</h1>
                 </div>
                 <div class="about-me-content">
-                    <div class="profile-content">
+                    <div class="profile-content">                      
                         <img src="../public/img/outside.png" alt="profile picture" class="profile-picture border-changing" />
                     </div>
                     <div class="middle">
                         <img src="../public/img/bg/div2.png" alt="arrow" class="middle-part" />
                     </div>
                     <div class="text-content">
-                        <p>something</p>
-                        <br>
-                        <br>
-                        <p>something</p>
-                        <br>
-                        <br>
-                        <p>something</p>
+                        <p class="content-paragraph">📚 I am an upcoming software and machine learning engineer. 
+                            Currently, I am a second-year undergraduate student at the <a href="https://www.utoronto.ca/" target="_blank" class="uoft">University of Toronto</a> 
+                            specializing in machine learning and data science, as well as majoring in math and minoring in economics. <span class="seeking">I am actively seeking an internship 
+                                in the winter semester of 2024</span>, and I am open to any opportunities that come my way.
+                        </p>
+                        <p class="content-paragraph">💻 Recently, I have worked as a <span class="data-science">Data Science Research Assistant</span> at <span class="uoft">IAI Labs</span> in Toronto, CA. Here, I partook in assisting with data visualization, 
+                            modeling regression models, and statistical analysis for a study on the "Behavioral Consequences of Reminder Emails on Students' Academic 
+                        Performace: a Real-world Development" which was recently recognized as the Best Paper at ACM SIGITE.
+                        </p>
+                        <p class="content-paragraph">When I happen to be free, which is much more than it may seem, I enjoy cooking 🍲, playing hockey 🏒, and watching cinema 🎥. You may also 
+                            find me paddle boarding 🏄🏻‍♂️ by the lake, hiking 🥾 in the national parks, or on the GO train 🚉 (I have a long commute to school). If you ever see me, feel 
+                            free to come up and say hi 👋🏼! I am always open to meeting new people and making new friends.
+                        </p>
+                    </div>
+                    <div class="dots">
+                        <div class="dot" onclick="showParagraph(0)"></div>
+                        <div class="dot" onclick="showParagraph(1)"></div>
+                        <div class="dot" onclick="showParagraph(2)"></div>
                     </div>
                 </div>
             </div>
@@ -54,9 +66,10 @@
         
         <section id="skills" class="reveal">
             <div class="skills-container">
-                <div class="skills-title">
-                    <h1 class="fall-down-text">Skills</h1>
-                </div>
+                <div class="toggle-jots">
+                    <div class="jot active" onclick="toggleSkills('technologies')"></div>
+                    <div class="jot" onclick="toggleSkills('relevant-others')"></div>
+                </div>                
                 <div class="skills-content">
                     <div class="technologies">
                         <h2 class="fade-in-text">Technologies</h2>
@@ -78,32 +91,49 @@
                             <div class="lang slide-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" /></div>
                         </div>
                     </div>
+                </div>
+                <div class="skills-content">
                     <div class="relevant-others">
                         <h2 class="fade-in-text">Relevant Others</h2>
-                        <div class="relevant-others-items">
-                            <div class="relevant-others-item slide-in-from-bottom">
-                                <h3>Scrum Methodology ⚙️</h3>
-                                <p>Description of Project 1</p>
+                        <div class="other-lang">
+                            <div class="other-skill  slide-in active" data-skill-id="statistical-analysis">
+                                <h3>📊 Statistical Analysis</h3>
+                                <p class="content-paragraph">
+                                    Proficient in statistical analysis techniques including regression analysis and data interpretation.
+                                </p>
                             </div>
-                            <div class="relevant-others-item slide-in-from-bottom">
-                                <h3>Communication 🗣️</h3>
-                                <p>Description of Project 2</p>
+                    
+                            <div class="other-skill  slide-in" data-skill-id="data-visualization">
+                                <h3>📈 Data Visualization</h3>
+                                <p class="content-paragraph">
+                                    Skilled in creating compelling data visualizations using tools like Matplotlib, Seaborn, and R programming.
+                                </p>
                             </div>
-                            <div class="relevant-others-item slide-in-from-bottom">
-                                <h3>Statistical Analysis 📊</h3>
-                                <p>Description of Project 2</p>
+                    
+                            <div class="other-skill  slide-in" data-skill-id="communication">
+                                <h3>🗣️ Communication</h3>
+                                <p class="content-paragraph">
+                                    Strong communication skills in 3 languages, both written and verbal, enabling effective collaboration and cooperation.
+                                </p>
                             </div>
-                            <div class="relevant-others-item slide-in-from-bottom">
-                                <h3>Problem Solving 💡</h3>
-                                <p>Description of Project 2</p>
+                    
+                            <div class="other-skill  slide-in" data-skill-id="problem-solving">
+                                <h3>🧩 Problem-Solving</h3>
+                                <p class="content-paragraph">
+                                    Adept at identifying complex problems, analyzing root causes, and developing innovative solutions.
+                                </p>
                             </div>
-                            <div class="relevant-others-item slide-in-from-bottom">
-                                <h3>Cooking 👨🏻‍🍳</h3>
-                                <p>Description of Project 2</p>
+                    
+                            <div class="other-skill  slide-in" data-skill-id="cooking">
+                                <h3>🍳 Cooking</h3>
+                                <p class="content-paragraph">
+                                    Passionate about cooking and experimenting with a wide range of cuisines and flavors.
+                                </p>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <div class="description-box"></div>
+                    </div> 
+                </div>   
             </div>
         </section>
     </main>
@@ -120,5 +150,7 @@
     <script src="../src/js/footer.js"></script>
     <script src="../src/js/animation.js"></script>
     <script src="../src/js/langs.js"></script>
+    <script src="../src/js/textToggle.js"></script>
+    <script src="../src/js/toggleSkills.js"></script>
 </body>
 </html>
